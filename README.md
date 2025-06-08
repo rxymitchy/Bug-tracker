@@ -1,63 +1,137 @@
-**Week 6: Testing and Debugging in MERN Applications**
+# 🐞 MERN Bug Tracker
 
-**Objective:**
+A full-stack **MERN** (MongoDB, Express, React, Node.js) application designed to help teams **report**, **track**, **update**, and **resolve bugs** across projects. The project integrates **testing and debugging best practices** to ensure application reliability and maintainability.
 
-- Develop a systematic approach to testing and debugging MERN applications.
-- Implement unit, integration, and component tests for both backend and frontend.
-- Identify and resolve issues using debugging tools and techniques.
+---
 
-**Project Suggestion:** Build a "Bug Tracker" application where users can create, update, and track issues in a project. The goal is to integrate testing and debugging best practices to ensure application reliability.
+## 📌 Key Features
 
-**Instructions:**
+* ✅ **Report Bugs** – Users can submit new bugs through a form.
+* 📋 **View Bugs** – See all reported bugs in a tabular or list format.
+* 🔄 **Update Status** – Change the status of bugs (e.g., `Open`, `In Progress`, `Resolved`).
+* ❌ **Delete Bugs** – Remove resolved or invalid issues.
+* 🧪 **Testing** – Backend and frontend testing using industry-standard libraries.
+* 🐞 **Debugging Tools** – Integrated debugging using DevTools, console logs, Node Inspector, and error boundaries.
 
-1. **Project Setup:**
-   - Create a new project folder called `mern-bug-tracker`.
-   - Set up both backend and frontend environments.
-   - Install necessary dependencies, including testing libraries (Jest, Supertest, React Testing Library).
+---
 
-2. **Application Features:**
-   - Users should be able to:
-     - Report new bugs by filling out a form.
-     - View a list of all reported bugs.
-     - Update bug statuses (e.g., open, in-progress, resolved).
-     - Delete bugs.
+## 📂 Tech Stack
 
-3. **Testing Requirements:**
-   - **Backend:**
-     - Write unit tests for individual helper functions (e.g., validation logic).
-     - Perform integration tests for API routes (e.g., create, update, delete bug endpoints).
-     - Mock database calls using libraries like `jest-mock`.
-   
-   - **Frontend:**
-     - Write unit tests for components (e.g., form validation, button clicks).
-     - Implement integration tests to verify API calls and UI updates.
-     - Ensure proper rendering of UI elements under different states (e.g., empty list, error message).
+* **Frontend**: React, Axios, React Testing Library, Tailwind CSS
+* **Backend**: Node.js, Express, MongoDB, Mongoose, Jest, Supertest
+* **Testing**: Jest, React Testing Library, Supertest
+* **Debugging**: Chrome DevTools, Node.js Inspector, Error Boundaries
 
-4. **Debugging Tasks:**
-   - Introduce intentional bugs in the code and utilize:
-     - Console logs for tracking values.
-     - Chrome DevTools for inspecting network requests and component state.
-     - Node.js inspector for debugging server-side code.
-     - Error boundary implementation for React components.
+---
 
-5. **Error Handling Implementation:**
-   - Implement error handling in the backend using Express middleware.
-   - Add client-side error boundaries to capture and gracefully handle crashes.
+## 🛠️ Installation
 
-6. **Documentation:**
-   - Write a `README.md` file that includes:
-     - How to install and run the project.
-     - Steps to run tests and debugging techniques used.
-     - Explanation of the testing approach and coverage.
+### 1. Clone the repo
 
-7. **Submission:**
-   - Push your code to your GitHub repository.
+```bash
+git clone https://github.com/rxymitchy/bug-tracker.git
+cd bug-tracker
+```
 
-**Evaluation Criteria:**
+### 2. Backend Setup
 
-- Comprehensive unit and integration tests.
-- Proper test coverage and documentation.
-- Effective use of debugging techniques.
-- Well-structured and maintainable code.
-- Clear and concise error handling implementation.
+```bash
+cd backend
+npm install
+cp .env.example .env
+# Add your MongoDB URI in .env file
+npm run dev
+```
 
+### 3. Frontend Setup
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🧪 Testing Guide
+
+### 🔙 Backend Tests
+
+```bash
+cd backend
+npm test
+```
+
+Includes:
+
+* Unit tests for helpers and validation logic
+* Integration tests for API routes (Create, Read, Update, Delete)
+* Mocking MongoDB using `jest-mock` or `mongodb-memory-server`
+
+### 🔛 Frontend Tests
+
+```bash
+cd frontend
+npm test
+```
+
+Includes:
+
+* Unit tests for components (form handling, UI updates)
+* Integration tests for user interactions and API calls
+
+---
+
+## 🐞 Debugging Techniques Used
+
+* **Console Logging** for value tracing
+* **Chrome DevTools** for React component inspection and network monitoring
+* **Node.js Inspector** for debugging backend logic (`node --inspect server.js`)
+* **React Error Boundaries** for graceful error handling on UI
+
+---
+
+## ⚠️ Error Handling
+
+* Custom Express middleware for backend error responses
+* Frontend error boundaries to prevent component crashes and display user-friendly messages
+
+---
+
+## 📈 Folder Structure Overview
+
+```
+bug-tracker/
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── tests/
+│   └── server.js
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api/
+│   │   └── App.jsx
+└── README.md
+```
+
+---
+
+## 📋 Future Improvements
+
+* User authentication (Login/Signup)
+* Role-based access control
+* Real-time updates with WebSockets
+* Bug categories and project filtering
+
+---
+
+## 👤 Author
+
+Built by [**@rxymitchy**](https://github.com/rxymitchy)
+Passionate about building reliable, tested, and scalable full-stack apps.
+
+---
